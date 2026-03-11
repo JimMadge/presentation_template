@@ -32,19 +32,27 @@
       figcaption {
         font-size: medium;
       }
-      /* Align text in tables */
-      .reveal table td,
-      .reveal table th {
-        text-align: center;
-      }
-      /* Columns div definition */
-      div.columns {
-        display: flex;
-        gap: min(4vw, 1.5em);
-      }
-      div.column {
-        flex: auto;
-        overflow-x: auto;
+      div {
+        /* Columns div definition */
+        &.columns {
+          display: flex;
+          gap: min(4vw, 1.5em);
+        }
+        &.column {
+          flex: auto;
+          overflow-x: auto;
+        }
+        /* container definition */
+        &.container {
+          display: grid;
+          grid-template-columns: auto auto auto;
+          & div.block {
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            padding: 5px;
+            text-align: center;
+          }
+        }
       }
       /* Blur fragment */
       .fragment.blur {
