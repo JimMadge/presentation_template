@@ -61,6 +61,17 @@
       .fragment.blur.visible {
         filter: none;
       }
+      :root {
+        --accent: #b58900;
+      }
+      .fragment.highlight {
+        &.current-fragment {
+          color: var(--accent);
+        }
+      }
+      em {
+        color: var(--accent);
+      }
     </style>
   </head>
   <body>
